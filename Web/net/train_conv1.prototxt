@@ -1,0 +1,28 @@
+layer {
+  name: "data"
+  type: "DummyData"
+  top: "data"
+  dummy_data_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 14
+      dim: 14
+    }
+  }
+}
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}

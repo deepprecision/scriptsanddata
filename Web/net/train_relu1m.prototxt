@@ -1,0 +1,43 @@
+layer {
+  name: "data"
+  type: "DummyData"
+  top: "data"
+  dummy_data_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 28
+      dim: 28
+    }
+  }
+}
+layer {
+  name: "relu1_1"
+  type: "ReLU"
+  bottom: "data"
+  top: "relu1_1"
+}
+layer {
+  name: "relu1_2"
+  type: "ReLU"
+  bottom: "relu1_1"
+  top: "relu1_2"
+}
+layer {
+  name: "relu1_3"
+  type: "ReLU"
+  bottom: "relu1_2"
+  top: "relu1_3"
+}
+layer {
+  name: "relu1_4"
+  type: "ReLU"
+  bottom: "relu1_3"
+  top: "relu1_4"
+}
+layer {
+  name: "relu1_5"
+  type: "ReLU"
+  bottom: "relu1_4"
+  top: "relu1_5"
+}

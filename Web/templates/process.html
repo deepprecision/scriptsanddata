@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <title>OperatorTesting</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="icon-bar" href="/main/">DifFuzz</a>
+                </li>
+                <li><a class="icon-bar" href="/api/upload/">Instruction</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>Welcome, admin</a>
+                </li>
+                <li><a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div id="wrapper" style="padding-top: 20%;padding-left: 20%;padding-right:20%">
+        <div class="progress progress-striped active">
+            <div id="prog" class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0"
+                 aria-valuemax="100" style="width:0;">
+                <span id="proglabel">Running...</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var count = 20;
+    var width=0;
+    var speed = 100;
+    setTimeout(go,speed);
+    function go() {
+        count--;
+        width=width+5;
+        document.getElementById("prog").style.width=width+"%";
+        if(count <= 0){
+            window.location.href = "/result/";
+        }else{
+            setTimeout(arguments.callee,speed); // 递归调用
+        }
+    }
+</script>
+
+
+</body>
+</html>

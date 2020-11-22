@@ -1,0 +1,18 @@
+<svg width="200" height="57" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="59" width="202" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_5" d="m176.5,505.453125" opacity="0.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <path id="svg_6" d="m86.5,413.453125" opacity="0.5" stroke-width="1.5" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_3" y="486.453125" x="754.5" stroke-width="0" stroke="#000" fill="#000000"/>
+  <text style="cursor: move;" stroke="#000" transform="matrix(2.1666667461395264,0,0,2.200000047683716,-933.9167302846909,-537.5437713600695) " xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="24" id="svg_8" y="442.453125" x="716.5" stroke-width="0" fill="#000000">NOTER</text>
+  <text style="cursor: move;" font-weight="normal" stroke="#000" transform="matrix(1.9796104172404227,0,0,2.132075548171997,-97.58423302958674,-41.83372924104333) " xml:space="preserve" text-anchor="start" font-family="'Times New Roman', Times, serif" font-size="16" id="svg_10" y="39.223037" x="61.97986" stroke-opacity="null" stroke-width="0" fill="#ffffff">NOTER</text>
+ </g>
+</svg>

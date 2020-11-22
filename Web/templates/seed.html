@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/seedupload/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input name="img" type="file" id="exampleInputFile">
+    <button id="img" class="btn btn-danger" type="submit">上传头像</button>
+</form>
+</body>
+</html>

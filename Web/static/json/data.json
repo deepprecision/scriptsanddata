@@ -1,0 +1,182 @@
+[
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "COE",
+    "Success Number": "3411",
+    "Success Rate": "68.2%"
+  },
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "EXPLOIT",
+    "Success Number": "3525",
+    "Success Rate": "70.5%"
+  },
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "EXPLORE",
+    "Success Number": "3477",
+    "Success Rate": "69.5%"
+  },
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "FAST",
+    "Success Number": "3619",
+    "Success Rate": "72.4%"
+  },
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "LEANER",
+    "Success Number": "3414",
+    "Success Rate": "68.3%"
+  },
+  {
+    "Operator": "Convolution",
+    "Power Schedule": "QUAD",
+    "Success Number": "3594",
+    "Success Rate": "71.9%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "COE",
+    "Success Number": "3615",
+    "Success Rate": "72.3%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "EXPLOIT",
+    "Success Number": "3554",
+    "Success Rate": "71.1%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "EXPLORE",
+    "Success Number": "3416",
+    "Success Rate": "68.3%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "FAST",
+    "Success Number": "3505",
+    "Success Rate": "70.1%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "LEANER",
+    "Success Number": "3382",
+    "Success Rate": "67.6%"
+  },
+  {
+    "Operator": "Pooling",
+    "Power Schedule": "QUAD",
+    "Success Number": "3492",
+    "Success Rate": "69.8%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "COE",
+    "Success Number": "3598",
+    "Success Rate": "72.0%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "EXPLOIT",
+    "Success Number": "3524",
+    "Success Rate": "70.5%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "EXPLORE",
+    "Success Number": "3692",
+    "Success Rate": "73.8%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "FAST",
+    "Success Number": "3535",
+    "Success Rate": "70.7%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "LEANER",
+    "Success Number": "3430",
+    "Success Rate": "68.6%"
+  },
+  {
+    "Operator": "Relu",
+    "Power Schedule": "QUAD",
+    "Success Number": "3463",
+    "Success Rate": "69.3%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "COE",
+    "Success Number": "3689",
+    "Success Rate": "73.8%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "EXPLOIT",
+    "Success Number": "3788",
+    "Success Rate": "75.8%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "EXPLORE",
+    "Success Number": "3542",
+    "Success Rate": "70.8%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "FAST",
+    "Success Number": "3694",
+    "Success Rate": "73.9%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "LEANER",
+    "Success Number": "3488",
+    "Success Rate": "69.8%"
+  },
+  {
+    "Operator": "Sigmoid",
+    "Power Schedule": "QUAD",
+    "Success Number": "3437",
+    "Success Rate": "68.7%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "COE",
+    "Success Number": "3566",
+    "Success Rate": "71.3%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "EXPLOIT",
+    "Success Number": "3809",
+    "Success Rate": "76.2%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "EXPLORE",
+    "Success Number": "3512",
+    "Success Rate": "70.2%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "FAST",
+    "Success Number": "3585",
+    "Success Rate": "71.7%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "LEANER",
+    "Success Number": "3673",
+    "Success Rate": "73.5%"
+  },
+  {
+    "Operator": "Tanh",
+    "Power Schedule": "QUAD",
+    "Success Number": "3561",
+    "Success Rate": "71.2%"
+  }
+]

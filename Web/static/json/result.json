@@ -1,0 +1,11 @@
+[
+  {
+    "Operator": "Convolution2D",
+    "Framework": "Tensorflow",
+    "Interface": "tf.nn.conv2d",
+    "MCMC Process": "Yes",
+    "Platform": "CPU/GPU",
+    "Threshold": "1×10^-6",
+    "Pass Rate": "93.6%"
+  }
+]

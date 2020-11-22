@@ -1,0 +1,19 @@
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param { shape: { dim: 1 dim: 3 dim: 28 dim: 28 } }
+}
+layer {
+  name: "dense1"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "dense1"
+  inner_product_param {
+    num_output: 10
+    weight_filler {
+      type: "constant"
+      value:1
+    }
+  }
+}

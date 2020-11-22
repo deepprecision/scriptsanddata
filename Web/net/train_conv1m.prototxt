@@ -1,0 +1,88 @@
+layer {
+  name: "data"
+  type: "DummyData"
+  top: "data"
+  dummy_data_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 28
+      dim: 28
+    }
+  }
+}
+layer {
+  name: "conv1_1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1_1"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "conv1_2"
+  type: "Convolution"
+  bottom: "conv1_1"
+  top: "conv1_2"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "conv1_3"
+  type: "Convolution"
+  bottom: "conv1_2"
+  top: "conv1_3"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "conv1_4"
+  type: "Convolution"
+  bottom: "conv1_3"
+  top: "conv1_4"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "conv1_5"
+  type: "Convolution"
+  bottom: "conv1_4"
+  top: "conv1_5"
+  convolution_param {
+    num_output: 1
+    kernel_size: 11
+    stride: 4
+    weight_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}

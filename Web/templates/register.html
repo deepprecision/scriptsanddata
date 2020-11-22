@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>用户注册</h3>
+{#<form action="" method="post" novalidate>#}
+{#    {% csrf_token %}#}
+{#    <div>#}
+{#        <label for="id_{{ form.name.name }}">姓名</label>#}
+{#        {{ form.name }} <span>{{ form.name.errors.0 }}</span>#}
+{#    </div>#}
+{#    <div>#}
+{#        <label for="id_salary">工资</label>#}
+{#        {{ form.salary }} <span>{{ form.salary.errors.0 }}{{ clear_errors.0 }}</span>#}
+{#    </div>#}
+{#    <div>#}
+{#        <label for="id_r_salary">请再输入工资</label>#}
+{#        {{ form.r_salary }} <span>{{ form.r_salary.errors.0 }}{{ clear_errors.0 }}</span>#}
+{#    </div>#}
+{#    <input type="submit">#}
+{#</form>#}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <p>用户名： <input type="text" name="username"><span>{{ form.username.errors.0 }}</span></p>
+    <p>密码： <input type="password" name="password"><span>{{ form.password.errors.0 }}{{ clear_errors.0 }}</span></p>
+    <p>再次输入密码： <input type="password" name="r_password"><span>{{ form.r_password.errors.0 }}{{ clear_errors.0 }}</span>
+    </p>
+    <input type="submit">
+</form>
+{#2、通过form对象的as_p方法实现#}
+{#<form action="" method="post" novalidate>#}
+{#    {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#    <input type="submit">#}
+{#</form>#}
+
+
+</body>
+</html>

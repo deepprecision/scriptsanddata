@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/atlantis.css" rel="stylesheet">
+    <link href="/static/css/demo.css" rel="stylesheet">
+    <link href="/static/css/fonts.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/bootstrap-table.min.js"></script>
+    <title>DifFuzz</title>
+    <style>
+        body {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="icon-bar" href="/main/">DifFuzz</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>欢迎, admin</a>
+                </li>
+                <li><a href="#">登出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar sidebar-style-2">
+                    <div class="sidebar-wrapper">
+                        <div class="sidebar-content">
+                            <ul class="nav nav-primary">
+                                <li class="nav-item">
+                                    <a href="/main/">
+                                        <i class="fas fa-layer-group"></i>
+                                        <p>开始测试</p>
+                                    </a>
+                                    <a href="/list/">
+                                        <i class="fas fa-layer-group"></i>
+                                        <p>测试记录</p>
+                                    </a>
+                                    <a href="/setting/">
+                                        <i class="fas fa-layer-group"></i>
+                                        <p>配置</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="card" style="padding-left: 5%;padding-right: 5%;padding-top: 5%">
+                    <form action="/fuzzing/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="card-header">
+                            <div class="card-title">参数设置</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="interface">待测接口<a href="#" data-toggle="popover"
+                                                                      title="深度学习框架下的算子接口">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <select class="form-control" id="interface" name="interface">
+                                            <option>conv1</option>
+                                            <option>conv2</option>
+                                            <option>pool1</option>
+                                            <option>pool2</option>
+                                            <option>relu1</option>
+                                            <option>sigmoid1</option>
+                                            <option>tanh1</option>
+                                            <option>softmax1</option>
+                                            <option>dense1</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="corpus">最大执行次数<a href="#" data-toggle="popover"
+                                                                    title="模糊测试最大迭代次数">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <input type="text" class="form-control" id="execnum" name="execnum"
+                                               placeholder="10000">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="framework1">原框架<a href="#" data-toggle="popover"
+                                                                      title="需要进行差分对比的原深度学习框架">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <select class="form-control" id="framework1" name="framework1">
+                                            <option>caffe</option>
+                                            <option>pytorch</option>
+                                            <option>tensorflow</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="framework2">对比框架<a href="#" data-toggle="popover"
+                                                                       title="需要进行差分对比的对比深度学习框架">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <select class="form-control" id="framework2" name="framework2">
+                                            <option>caffe</option>
+                                            <option>pytorch</option>
+                                            <option>tensorflow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <label for="precision">终止条件<a href="#" data-toggle="popover"
+                                                                      title="当发现多少个crash时将停止模糊测试">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <input type="text" class="form-control" id="endcondition" name="endcondition"
+                                               placeholder="100">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mode">硬件环境<a href="#" data-toggle="popover" title="模糊测试的硬件环境">
+                                            <span class="glyphicon glyphicon-question-sign"></span>
+                                        </a></label>
+                                        <select class="form-control" id="mode" name="mode">
+                                            <option>GPU-GPU</option>
+                                            <option>CPU-GPU</option>
+                                            <option>CPU-CPU</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部页脚部分 -->
+    <div class="footer">
+        <p class="text-center"></p>
+    </div>
+</div>
+
+</body>
+</html>

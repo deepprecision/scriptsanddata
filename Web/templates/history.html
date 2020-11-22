@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/atlantis.css" rel="stylesheet">
+    <link href="/static/css/demo.css" rel="stylesheet">
+    <link href="/static/css/fonts.css" rel="stylesheet">
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/bootstrap-table.min.js"></script>
+    <title>OperatorTesting</title>
+
+</head>
+
+<script>
+
+    function showConv() {
+        $("#Convolution").tab('show');
+        let pieChart = echarts.init(document.getElementById('pieChart'));
+
+        // 指定图表的配置项和数据
+        let option = {
+            title: {
+                text: 'Convolution',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ['COE', 'EXPLOIT', 'EXPLORE', 'FAST', 'LEANER', 'QUAD']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            calculable: true,
+            series: [
+                {
+                    type: 'pie',
+                    radius: [100, 200],
+                    center: ['50%', '50%'],
+                    roseType: 'radius',
+                    label: {
+                        normal: {
+                            formatter: ' {b|{b}：}{c}  ',
+                            backgroundColor: '#eee',
+                            borderColor: '#aaa',
+                            borderWidth: 1,
+                            borderRadius: 4,
+
+                            rich: {
+                                hr: {
+                                    borderColor: '#aaa',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                b: {
+                                    fontSize: 16,
+                                    lineHeight: 33
+                                }
+                            }
+                        }
+                    },
+                    data: [
+                        {value: 3411, name: 'COE'},
+                        {value: 3525, name: 'EXPLOIT'},
+                        {value: 3477, name: 'EXPLORE'},
+                        {value: 3619, name: 'FAST'},
+                        {value: 3414, name: 'LEANER'},
+                        {value: 3594, name: 'QUAD'}
+                    ]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        pieChart.setOption(option);
+    }
+
+    function showPooling() {
+        $("#Pooling").tab('show');
+        let pieChart = echarts.init(document.getElementById('pieChart'));
+
+        // 指定图表的配置项和数据
+        let option = {
+            title: {
+                text: 'Pooling',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ['COE', 'EXPLOIT', 'EXPLORE', 'FAST', 'LEANER', 'QUAD']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            calculable: true,
+            series: [
+                {
+                    type: 'pie',
+                    radius: [100, 200],
+                    center: ['50%', '50%'],
+                    roseType: 'radius',
+                    label: {
+                        normal: {
+                            formatter: ' {b|{b}：}{c}  ',
+                            backgroundColor: '#eee',
+                            borderColor: '#aaa',
+                            borderWidth: 1,
+                            borderRadius: 4,
+
+                            rich: {
+                                hr: {
+                                    borderColor: '#aaa',
+                                    width: '100%',
+                                    borderWidth: 0.5,
+                                    height: 0
+                                },
+                                b: {
+                                    fontSize: 16,
+                                    lineHeight: 33
+                                }
+                            }
+                        }
+                    },
+                    data: [
+                        {value: 3615, name: 'COE'},
+                        {value: 3554, name: 'EXPLOIT'},
+                        {value: 3416, name: 'EXPLORE'},
+                        {value: 3505, name: 'FAST'},
+                        {value: 3382, name: 'LEANER'},
+                        {value: 3492, name: 'QUAD'}
+                    ]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        pieChart.setOption(option);
+    }
+</script>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="icon-bar" href="/main/">DifFuzz</a>
+                </li>
+                <li><a class="icon-bar" href="/api/upload/">Instruction</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>Welcome, admin</a>
+                </li>
+                <li><a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="page-header">
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a href="/main/">
+                    <i class="flaticon-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="/result/">Result</a>
+            </li>
+            <li class="separator">
+                <i class="flaticon-right-arrow"></i>
+            </li>
+            <li class="nav-item">
+                <a href="/history/">History</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <table id="bootstrap-table" class="table table-hover"></table>
+            <script type="application/javascript">
+                function addFunctionAlty(value, row, index) {
+                    return [
+                        '<button id="detail" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Detail</button>'
+                    ].join('');
+                }
+
+                window.operateEvents = {
+                    'click #detail': function (e, value, row, index) {
+                        alert(row.qxxh);
+                    }
+                };
+                $('#bootstrap-table').bootstrapTable({
+                    url: '/static/json/passrate.json',
+                    sidePagination: "true",
+                    pageSize: "8",
+                    pagination: true, // 是否分页
+                    columns: [
+
+                        {
+                            field: 'Time',
+                            title: 'Time'
+                        },
+                        {
+                            field: 'Pass Rate',
+                            title: 'Pass Rate'
+                        },
+                        {
+                            field: 'Operation',
+                            title: 'Operation',
+                            events: operateEvents,//给按钮注册事件
+                            formatter: addFunctionAlty//表格中增加按钮
+                        }
+                    ],
+                });
+
+
+            </script>
+            {#            <div style="text-align: right" style="margin-right: 100px">#}
+            {#                <a href="/setting/" class="btn btn-primary btn-lg" style="margin-top: 100px;margin-right: 50px">#}
+            {#                    <span class="glyphicon glyphicon-download-alt"></span> Continue Testing#}
+            {#                </a>#}
+            {#            </div>#}
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Detail</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td style="color:blue;">Operator to compare</td>
+                                <td>tf.nn.conv2d</td>
+                                <td style="color:blue;">Framework belongs to</td>
+                                <td>Tensorflow</td>
+                            </tr>
+                            <tr>
+                                <td style="color:blue;">MCMC Process</td>
+                                <td>Yes</td>
+                                <td style="color:blue;">Platform</td>
+                                <td>CPU+GPU</td>
+                            </tr>
+                            <tr>
+                                <td style="color:blue;">Threshold</td>
+                                <td>1×10^-6</td>
+                                <td style="color:blue;">Pass Rate</td>
+                                <td>93.6%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Download
+                        </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+        <div class="col-lg-8">
+            <h1>Pass Rate Chart</h1>
+            <hr>
+            <h2>Below is the historical pass rate, you can continue to optimize your test</h2>
+            <div id="lineChart" style="height:500px;"></div>
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                let lineChart = echarts.init(document.getElementById('lineChart'));
+
+                // 指定图表的配置项和数据
+                let option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                    },
+                    yAxis: {
+                        type: 'value',
+                        scale: true,
+                        min: "dataMin",
+                        max: 1,
+                    },
+                    series: [
+                        {
+                            name: 'rate',
+                            type: 'line',
+                            stack: 'pass rate',
+                            data: [0.183, 0.243, 0.430, 0.678, 0.596, 0.866, 0.911, 0.824, 0.936]
+                        }
+                    ]
+                };
+
+
+                // 使用刚指定的配置项和数据显示图表。
+                lineChart.setOption(option);
+            </script>
+            {#            <ul class="nav nav-pills">#}
+            {#                <li id="Convolution" onclick="showConv()" class="active"><a href="#">Convolution</a></li>#}
+            {#                <li id="Pooling" onclick="showPooling()"><a href="#">Pooling</a></li>#}
+            {#                <li><a href="#">Relu</a></li>#}
+            {#                <li><a href="#">Sigmoid</a></li>#}
+            {#                <li><a href="#">Tanh</a></li>#}
+            {#            </ul>#}
+            {#            <div id="pieChart" style="width: 800px;height:600px;padding-top: 100px;"></div>#}
+            {#            <script type="text/javascript">#}
+            {#                // 基于准备好的dom，初始化echarts实例#}
+            {#                let pieChart = echarts.init(document.getElementById('pieChart'));#}
+            {##}
+            {#                // 指定图表的配置项和数据#}
+            {#                let option = {#}
+            {#                    title: {#}
+            {#                        text: 'Convolution',#}
+            {#                        x: 'center'#}
+            {#                    },#}
+            {#                    tooltip: {#}
+            {#                        trigger: 'item',#}
+            {#                        formatter: "{b} : {c} ({d}%)"#}
+            {#                    },#}
+            {#                    legend: {#}
+            {#                        x: 'center',#}
+            {#                        y: 'bottom',#}
+            {#                        data: ['COE', 'EXPLOIT', 'EXPLORE', 'FAST', 'LEANER', 'QUAD']#}
+            {#                    },#}
+            {#                    toolbox: {#}
+            {#                        show: true,#}
+            {#                        feature: {#}
+            {#                            mark: {show: true},#}
+            {#                            dataView: {show: true, readOnly: false},#}
+            {#                            magicType: {#}
+            {#                                show: true,#}
+            {#                                type: ['pie', 'funnel']#}
+            {#                            },#}
+            {#                            restore: {show: true},#}
+            {#                            saveAsImage: {show: true}#}
+            {#                        }#}
+            {#                    },#}
+            {#                    calculable: true,#}
+            {#                    series: [#}
+            {#                        {#}
+            {#                            type: 'pie',#}
+            {#                            radius: [100, 200],#}
+            {#                            center: ['50%', '50%'],#}
+            {#                            roseType: 'radius',#}
+            {#                            label: {#}
+            {#                                normal: {#}
+            {#                                    formatter: ' {b|{b}：}{c}  ',#}
+            {#                                    backgroundColor: '#eee',#}
+            {#                                    borderColor: '#aaa',#}
+            {#                                    borderWidth: 1,#}
+            {#                                    borderRadius: 4,#}
+            {##}
+            {#                                    rich: {#}
+            {#                                        hr: {#}
+            {#                                            borderColor: '#aaa',#}
+            {#                                            width: '100%',#}
+            {#                                            borderWidth: 0.5,#}
+            {#                                            height: 0#}
+            {#                                        },#}
+            {#                                        b: {#}
+            {#                                            fontSize: 16,#}
+            {#                                            lineHeight: 33#}
+            {#                                        }#}
+            {#                                    }#}
+            {#                                }#}
+            {#                            },#}
+            {#                            data: [#}
+            {#                                {value: 3411, name: 'COE'},#}
+            {#                                {value: 3525, name: 'EXPLOIT'},#}
+            {#                                {value: 3477, name: 'EXPLORE'},#}
+            {#                                {value: 3619, name: 'FAST'},#}
+            {#                                {value: 3414, name: 'LEANER'},#}
+            {#                                {value: 3594, name: 'QUAD'}#}
+            {#                            ]#}
+            {#                        }#}
+            {#                    ]#}
+            {#                };#}
+            {##}
+            {##}
+            {#                // 使用刚指定的配置项和数据显示图表。#}
+            {#                pieChart.setOption(option);#}
+            {#            </script>#}
+        </div>
+
+    </div>
+    <!-- 底部页脚部分 -->
+    <div class="footer">
+        <p class="text-center"></p>
+    </div>
+</div>
+
+</body>
+</html>

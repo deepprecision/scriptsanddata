@@ -1,0 +1,38 @@
+[
+  {
+    "#": "1",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000059"
+  },
+  {
+    "#": "2",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000023"
+  },
+  {
+    "#": "3",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000011"
+  },
+  {
+    "#": "4",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000004"
+  },
+  {
+    "#": "5",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000002"
+  },
+  {
+    "#": "6",
+    "Perturbation": "Change Bit",
+    "Power Schedule": "COE",
+    "Discrepency": "0.000001"
+  }
+]
